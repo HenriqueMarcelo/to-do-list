@@ -26,10 +26,16 @@
 
 .button {
     line-height: 1;
-    border-radius: 5rem;
-    padding: 0 .1rem ;
+    border-radius: 0.5rem;
+    padding: 0.175rem 0.25rem;
     background: none;
     color: var(--gray-300);
     border: none;
     cursor: pointer;
+    transition: .1s;
+}
+
+.button:hover {
+    background: var(--gray-400);
+    color: var(--red-500);
 }
