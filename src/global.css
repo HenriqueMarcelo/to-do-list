@@ -9,9 +9,11 @@
 
   --purple-300: #8284FA;
   --purple-500: #5E60CE;
+  --purple-500-transparent: #5E60CE33;
 
   --blue-300: #4EA8DE;
   --blue-500: #1E6F9F;
+  --blue-500-transparent: #1E6F9F33;
 
   --red-500: #E25858;
 }
