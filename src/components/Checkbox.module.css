@@ -1,6 +1,6 @@
 .checkbox {
     border: 0.125rem solid var(--blue-300);
-    background-color: var(--gray-600);
+    background-color: transparent;
     
     color: var(--gray-100);
     border-radius: 5rem;

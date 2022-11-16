@@ -1,0 +1,35 @@
+.container {
+    background-color: var(--gray-500);
+    border: 1px solid var(--gray-400);
+    padding: 1rem;
+    border-radius: .5rem;
+    margin-bottom: 1rem;
+
+    display: flex;
+    align-items: flex-start;
+}
+
+.containerChecked{
+    border: 1px solid var(--gray-500);
+}
+
+.text {
+    font-size: 0.875rem;
+    margin: 0 1rem 0 0.75rem;
+    font-size: 0.875rem;
+}
+
+.textChecked {
+    color: var(--gray-300);
+    text-decoration: line-through;
+}
+
+.button {
+    line-height: 1;
+    border-radius: 5rem;
+    padding: 0 .1rem ;
+    background: none;
+    color: var(--gray-300);
+    border: none;
+    cursor: pointer;
+}

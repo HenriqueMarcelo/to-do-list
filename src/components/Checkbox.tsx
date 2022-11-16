@@ -1,16 +1,23 @@
-import { useState } from 'react';
 import { BiCheck } from 'react-icons/bi';
 import style from './Checkbox.module.css';
 
-export function Checkbox() {
-  const [isChecked, setIsChecked] = useState(false);
+interface CheckboxProps {
+  checked: boolean;
+  onCheck: () => void;
+}
+
+export function Checkbox({ checked, onCheck }:CheckboxProps) {
+  function handleCheck() {
+    onCheck();
+  }
+
   return (
     <button
-      className={`${style.checkbox} ${isChecked ? style.checkboxChecked : ''}`}
+      className={`${style.checkbox} ${checked && style.checkboxChecked}`}
       type="button"
-      onClick={() => { setIsChecked(!isChecked); }}
+      onClick={handleCheck}
     >
-      {isChecked
+      {checked
       && <BiCheck />}
     </button>
   );
