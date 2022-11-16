@@ -32,6 +32,8 @@ body {
   line-height: 1.4;
   color: var(--gray-100);
   -webkit-font-smoothing: antialiased;
+
+  background-color: var(--gray-600);
 }
 
 body, input, textarea, button {

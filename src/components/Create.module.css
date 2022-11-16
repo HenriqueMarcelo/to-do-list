@@ -1,5 +1,5 @@
 .form {
-    width: 46rem;
+    max-width: 46rem;
     display: flex;
     margin: 0 auto;
     gap: .5rem;
@@ -25,7 +25,7 @@
 }
 
 .button {
-    background-color: var(--purple-500);
+    background-color: var(--blue-500);
     padding: 1rem;
     border-radius: 8px;
     font-size: 0.875rem;
@@ -33,10 +33,11 @@
     cursor: pointer;
     font-weight: 600;
     color: var(--gray-100);
+    transition: .1s;
 }
 
 .button:not(:disabled):hover {
-    background-color: var(--purple-300);
+    background-color: var(--blue-300);
 }
 
 .button:disabled {
