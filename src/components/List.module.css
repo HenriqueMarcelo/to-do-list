@@ -1,6 +1,7 @@
 .container{
     margin: 0 auto;
-    width: 46rem;
+    max-width: 46rem;
+    padding: 0 var(--gap);
 }
 
 .icon {

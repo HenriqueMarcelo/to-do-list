@@ -5,6 +5,7 @@
     gap: .5rem;
 
     margin-top: -1.687rem;
+    padding: 0 var(--gap);
 }
 
 .input {

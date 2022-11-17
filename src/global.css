@@ -16,6 +16,7 @@
   --blue-500-transparent: #1E6F9F33;
 
   --red-500: #E25858;
+  --gap: 0px;
 }
 
 :focus {
@@ -43,4 +44,14 @@ body, input, textarea, button {
   line-height: 1.4;
   font-weight: 400;
   font-size: 1rem;
+}
+
+@media (max-width: 768px) {
+  :root{
+    --gap: 1rem;
+  }
+  
+  body {
+      font-size: 87.5%;
+  }
 }
