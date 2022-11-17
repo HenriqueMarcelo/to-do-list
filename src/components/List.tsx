@@ -22,9 +22,7 @@ export function List({ tasks }: CreateProps) {
       </header>
 
       <section>
-        <Task />
-        <Task />
-        <Task />
+        {tasks.map((task) => <Task key={task.id} />)}
       </section>
     </div>
   );
