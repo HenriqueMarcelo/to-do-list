@@ -1,4 +1,3 @@
-/* eslint-disable no-param-reassign */
 import { useState } from 'react';
 import { Create } from './components/Create';
 import { Header } from './components/Header';

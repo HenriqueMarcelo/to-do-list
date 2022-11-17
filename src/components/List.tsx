@@ -13,7 +13,7 @@ interface CreateProps {
 export function List({ tasks, toggleTask, deleteTask }: CreateProps) {
   return (
     <div className={style.container}>
-      <Counters />
+      <Counters tasks={tasks} />
 
       <section>
         {tasks.map((task) => (
