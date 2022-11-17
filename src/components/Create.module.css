@@ -11,6 +11,7 @@
 .input {
     flex: 1;
     background-color: var(--gray-500);
+    min-width: 0;
 
     padding: 1rem;
 
@@ -35,6 +36,7 @@
     font-weight: 600;
     color: var(--gray-100);
     transition: .1s;
+    white-space: nowrap;
 }
 
 .button:not(:disabled):hover {
