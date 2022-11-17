@@ -33,5 +33,6 @@ module.exports = {
     'no-unused-vars': 1,
 
     'react/require-default-props': 0,
+    'import/no-cycle': 0,
   },
 };

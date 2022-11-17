@@ -1,7 +1,13 @@
 import { Task } from './Task';
 import style from './List.module.css';
 
-export function List() {
+import { TaskProps } from '../App';
+
+interface CreateProps {
+  tasks: TaskProps[];
+}
+
+export function List({ tasks }: CreateProps) {
   return (
     <div className={style.container}>
       <header className={style.header}>
