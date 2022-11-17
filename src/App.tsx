@@ -29,11 +29,21 @@ function App() {
     );
   }
 
+  function handleDeleteTask(id: string) {
+    setTasks(
+      tasks.filter((task) => task.id !== id),
+    );
+  }
+
   return (
     <>
       <Header />
       <Create onCreateTask={onCreateTask} />
-      <List tasks={tasks} toggleTask={handleToggleTask} />
+      <List
+        tasks={tasks}
+        toggleTask={handleToggleTask}
+        deleteTask={handleDeleteTask}
+      />
     </>
   );
 }
