@@ -1,3 +1,4 @@
+/* eslint-disable no-param-reassign */
 import { useState } from 'react';
 import { Create } from './components/Create';
 import { Header } from './components/Header';
@@ -17,11 +18,22 @@ function App() {
     setTasks([...tasks, task]);
   }
 
+  function handleToggleTask(id: string) {
+    setTasks(
+      tasks.map((task) => {
+        if (task.id === id) {
+          task.completed = !task.completed;
+        }
+        return task;
+      }),
+    );
+  }
+
   return (
     <>
       <Header />
       <Create onCreateTask={onCreateTask} />
-      <List tasks={tasks} />
+      <List tasks={tasks} toggleTask={handleToggleTask} />
     </>
   );
 }

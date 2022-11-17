@@ -1,26 +1,29 @@
 import { useState } from 'react';
 import { HiOutlineTrash } from 'react-icons/hi';
+import { TaskProps } from '../App';
 import { Checkbox } from './Checkbox';
 
 import style from './Task.module.css';
 
-export function Task() {
-  const [isChecked, setIsChecked] = useState(false);
+interface TaskElementProps {
+  task: TaskProps;
+  toggleTask: (id: string) => void;
+}
 
+export function Task({ task, toggleTask } : TaskElementProps) {
   function handleCheck() {
-    setIsChecked((state) => !state);
+    toggleTask(task.id);
   }
 
   return (
     <div
-      className={`${style.container} ${isChecked && style.containerChecked}`}
+      className={`${style.container} ${task.completed && style.containerChecked}`}
     >
-      <Checkbox checked={isChecked} onCheck={handleCheck} />
+      <Checkbox checked={task.completed} onCheck={handleCheck} />
       <p
-        className={`${style.text} ${isChecked && style.textChecked}`}
+        className={`${style.text} ${task.completed && style.textChecked}`}
       >
-        Integer urna interdum massa libero auctor neque turpis turpis semper.
-        Duis vel sed fames integer.
+        {task.text}
       </p>
       <button type="button" className={style.button}>
         <HiOutlineTrash />

@@ -5,9 +5,10 @@ import { TaskProps } from '../App';
 
 interface CreateProps {
   tasks: TaskProps[];
+  toggleTask: (id: string) => void;
 }
 
-export function List({ tasks }: CreateProps) {
+export function List({ tasks, toggleTask }: CreateProps) {
   return (
     <div className={style.container}>
       <header className={style.header}>
@@ -22,7 +23,7 @@ export function List({ tasks }: CreateProps) {
       </header>
 
       <section>
-        {tasks.map((task) => <Task key={task.id} />)}
+        {tasks.map((task) => <Task key={task.id} task={task} toggleTask={toggleTask} />)}
       </section>
     </div>
   );
